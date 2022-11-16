@@ -3,6 +3,7 @@
 require_once 'libs/Router.php';
 require_once 'Controller/ApiProductsController.php';
 
+
 // crea el router
 $router = new Router();
 
@@ -13,6 +14,7 @@ $router->addRoute('products/:ID', 'DELETE', 'ApiProductsController', 'deleteProd
 $router->addRoute('products/:ID', 'GET', 'ApiProductsController', 'getProduct');
 $router->addRoute('products/:ID', 'PUT', 'ApiProductsController', 'updateProduct');
 
+// $router->addRoute('users/token', 'GET', 'ApiUserController', 'getToken');
 
 // rutea
 $router->route($_GET["resource"], $_SERVER['REQUEST_METHOD']);
